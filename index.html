@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Scheduler</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Event Scheduler</h1>
+
+    <!-- Add Event Form -->
+    <section class="card">
+      <h2>Add Event</h2>
+      <form id="event-form">
+        <div class="row">
+          <label>Title
+            <input type="text" id="title" required />
+          </label>
+          <label>Date
+            <input type="date" id="date" required />
+          </label>
+          <label>Time
+            <input type="time" id="time" required />
+          </label>
+        </div>
+        <label>Description
+          <textarea id="description" rows="3" placeholder="Optional"></textarea>
+        </label>
+        <div class="actions">
+          <button type="submit">Add Event</button>
+          <button type="button" id="clear">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Event List -->
+    <section class="card">
+      <h2>Upcoming Events</h2>
+      <ul id="events-list" class="events-list"></ul>
+      <p id="no-events" class="muted">No events yet. Add one above!</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
